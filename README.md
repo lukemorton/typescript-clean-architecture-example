@@ -19,11 +19,11 @@ npm run dev
 With development server running in another tab:
 
 ```
-npm run test
+npm test
 ```
 
 Or watch your tests:
 
 ```
-npm run test -- --watch
+npm test -- --watch
 ```
