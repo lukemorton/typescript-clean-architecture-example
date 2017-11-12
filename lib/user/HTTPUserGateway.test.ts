@@ -1,5 +1,5 @@
 import * as HTTPUserGateway from './HTTPUserGateway'
-import { mockExecute } from '../api/Client'
+import mockExecute from '../../test/support/mockExecute'
 
 describe('HTTPUserGateway', () => {
   describe('when finding by id', () => {

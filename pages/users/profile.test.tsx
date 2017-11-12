@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { mountPage } from 'republic/test-next'
-import { mockExecute } from '../../lib/api/Client'
+import mockExecute from '../../test/support/mockExecute'
 import UserProfile from './profile'
 
 describe('UserProfile', () => {
