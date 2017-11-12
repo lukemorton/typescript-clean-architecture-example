@@ -5,7 +5,7 @@
     "prepare": "npm run build:ts && npm run build:next",
     "start": "NODE_ENV=production republic lib/app.js",
     "dev": "NODE_ENV=development nodemon lib/app.js --exec republic --watch lib/",
-    "test": "jest"
+    "test": "jest --notify"
   },
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
