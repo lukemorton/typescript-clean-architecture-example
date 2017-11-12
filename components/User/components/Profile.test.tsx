@@ -4,6 +4,6 @@ import Profile from './Profile'
 
 describe('<Profile />', () => {
   it('should display name', () => {
-    expect(shallow(<Profile name='Luke' />)).toIncludeText('Luke')
+    expect(shallow(<Profile name='Luke' />)).toIncludeText('Name: Luke')
   })
 })

@@ -31,17 +31,43 @@ paths:
           schema:
             $ref: "#/definitions/Error"
 definitions:
-  User:
-    required:
-      - name
-      - email
+  UserBasicInfo:
     properties:
       name:
         type: string
         example: "Mr Bob Example"
-      email:
+      biography:
         type: string
-        example: "bob@example.com"
+        example: "I like bicycles"
+      twitter:
+        type: string
+        example: "@bobexample"
+      createdAt:
+        type: string
+        format: date-time
+      lastSeenAt:
+        type: string
+        format: date-time
+
+  User:
+    properties:
+      basicInfo:
+        $ref: "#/definitions/UserBasicInfo"
+      friends:
+        type: array
+        items:
+          $ref: "#/definitions/UserBasicInfo"
+        example:
+          - name: James
+            biography: Like Bond
+            createdAt: 2017-11-12T22:27:35.278Z
+            lastSeenAt: 2017-11-12T22:27:35.278Z
+          - name: Dan
+            biography: Yeah mayne
+            twitter: "@danmayne"
+            createdAt: 2017-11-12T22:27:35.278Z
+            lastSeenAt: 2017-11-12T22:27:35.278Z
+
   Error:
     required:
       - message

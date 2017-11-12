@@ -1,12 +1,10 @@
 import * as Swagger from 'swagger-client'
-import * as fs from 'fs'
-import * as jsYaml from 'js-yaml'
+import * as spec from '../../api/swagger.json'
 
 const API_HOST = process.env.API_HOST
 
 export function loadSpec (): any {
-  const spec = fs.readFileSync(__dirname + '/../../api/swagger.yml', 'utf8')
-  return { ...jsYaml.safeLoad(spec), host: API_HOST }
+  return { ...spec, host: API_HOST }
 }
 
 export async function execute (operationId: String, parameters: any): Promise<any> {

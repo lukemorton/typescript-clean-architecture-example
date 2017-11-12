@@ -11,7 +11,6 @@ type Response = {
 }
 
 export default async function LoadUserProfile (gateway: UserGateway, req: Request) : Promise<Response> {
-  return {
-    user: await gateway.findById(req.id)
-  }
+  const user = await gateway.findById(req.id)
+  return { user }
 }

@@ -1,0 +1,4 @@
+.swagger-codegen*
+swagger.json
+mock
+README.md
