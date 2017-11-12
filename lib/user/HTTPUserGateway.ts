@@ -1,10 +1,9 @@
-import 'isomorphic-fetch'
+import { execute } from '../api/Client'
 import User from './User'
 
 const API_ORIGIN = process.env.API_ORIGIN
 
-export async function findById (id: string) : Promise<User> {
-  const res = await fetch(`${API_ORIGIN}/api/users/${id}`)
-  const { name, email } = await res.json()
+export async function findById (userId: string) : Promise<User> {
+  const { name, email } = await execute('findUserById', { userId })
   return new User(name, email)
 }

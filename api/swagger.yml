@@ -13,6 +13,7 @@ produces:
 paths:
   /users/{userId}:
     get:
+      operationId: findUserById
       description: Returns user object
       parameters:
         - name: userId
