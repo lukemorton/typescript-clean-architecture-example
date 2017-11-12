@@ -1,8 +1,10 @@
 import 'isomorphic-fetch'
 import User from './User'
 
+const API_ORIGIN = process.env.API_ORIGIN
+
 export async function findById (id: string) : Promise<User> {
-  const res = await fetch('https://google.com')
-  const name = (await res.text()).slice(0, 10)
+  const res = await fetch(`${API_ORIGIN}/api/users/${id}`)
+  const { name } = await res.json()
   return new User(name, 'luke@cool.com')
 }

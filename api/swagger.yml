@@ -1,0 +1,46 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Hello World App
+basePath: /api
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /users/{userId}:
+    get:
+      description: Returns user object
+      parameters:
+        - name: userId
+          in: path
+          description: The ID of the user
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/User"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/Error"
+definitions:
+  User:
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        example: "Mr Bob Example"
+  Error:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+        example: "An example error occurred"

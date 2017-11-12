@@ -1,3 +1,4 @@
 **/*.js
 .next
 node_modules
+api/mock

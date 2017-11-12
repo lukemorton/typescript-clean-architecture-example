@@ -1,11 +1,13 @@
 {
   "scripts": {
-    "build:ts": "tsc",
+    "build:ts": "tsc -p tsconfig.production.json",
     "build:next": "next build",
-    "prepare": "npm run build:ts && npm run build:next",
+    "prepare": "npm run clean && npm run build:ts && npm run build:next",
     "start": "NODE_ENV=production republic lib/app.js",
-    "dev": "NODE_ENV=development nodemon lib/app.js --exec republic --watch lib/",
-    "test": "jest --notify"
+    "dev": "tsc && NODE_ENV=development API_ORIGIN=http://localhost:8080 nodemon lib/app.js --exec republic --watch lib/",
+    "api": "cd api && make",
+    "test": "API_ORIGIN=http://api jest --notify",
+    "clean": "rm -f {lib,pages,spec}/**/*.js"
   },
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
@@ -30,6 +32,7 @@
     "nock": "^9.0.14",
     "nodemon": "^1.12.1",
     "react-test-renderer": "^16.0",
+    "swagger": "^0.7.5",
     "ts-jest": "^21.1.4",
     "typescript": "^2.1.5"
   },
