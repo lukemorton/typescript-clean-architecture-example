@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { LoadUserProfile } from '../lib/user/'
-import UserProfile from '../components/UserProfile'
+import { Profile } from '../components/User'
 
 export default class extends React.Component {
   props: {
@@ -16,7 +16,7 @@ export default class extends React.Component {
       <div>
         <h1>Hello world!</h1>
 
-        <UserProfile {...this.props.user} />
+        <Profile {...this.props.user} />
       </div>
     )
   }
