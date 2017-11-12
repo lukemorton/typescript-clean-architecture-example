@@ -1,7 +1,7 @@
 {
   "scripts": {
     "prepare": "tsc",
-    "dev": "concurrently \"tsc --watch\" next",
+    "dev": "concurrently \"tsc --watch\" \"republic --env dev lib/app.js\"",
     "test": "jest",
     "clean": "rm -rf **/*.js"
   },
@@ -9,13 +9,17 @@
     "@types/isomorphic-fetch": "0.0.34",
     "@types/lodash.partial": "^4.2.3",
     "@types/react": "^16.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "isomorphic-fetch": "^2.2.1",
     "lodash.partial": "^4.2.1",
     "next": "^4.1.4",
     "nock": "^9.0.14",
     "react": "^16.0",
     "react-dom": "^16.0",
-    "react-test-renderer": "^16.0"
+    "react-test-renderer": "^16.0",
+    "republic": "^0.4.15"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.4",
