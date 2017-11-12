@@ -5,6 +5,6 @@ const API_ORIGIN = process.env.API_ORIGIN
 
 export async function findById (id: string) : Promise<User> {
   const res = await fetch(`${API_ORIGIN}/api/users/${id}`)
-  const { name } = await res.json()
-  return new User(name, 'luke@cool.com')
+  const { name, email } = await res.json()
+  return new User(name, email)
 }

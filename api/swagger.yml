@@ -33,10 +33,14 @@ definitions:
   User:
     required:
       - name
+      - email
     properties:
       name:
         type: string
         example: "Mr Bob Example"
+      email:
+        type: string
+        example: "bob@example.com"
   Error:
     required:
       - message
