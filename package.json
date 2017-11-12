@@ -2,7 +2,8 @@
   "scripts": {
     "prepare": "tsc",
     "dev": "concurrently \"tsc --watch\" next",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf **/*.js"
   },
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
