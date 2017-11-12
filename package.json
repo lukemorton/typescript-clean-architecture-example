@@ -1,9 +1,9 @@
 {
   "scripts": {
     "build:ts": "tsc -p tsconfig.production.json",
-    "build:next": "next build",
+    "build:next": "API_ORIGIN=http://localhost:8080 next build",
     "prepare": "npm run clean && npm run build:ts && npm run build:next",
-    "start": "NODE_ENV=production republic lib/app.js",
+    "start": "NODE_ENV=production API_ORIGIN=http://localhost:8080 republic lib/app.js",
     "dev": "tsc && NODE_ENV=development API_ORIGIN=http://localhost:8080 nodemon lib/app.js --exec republic --watch lib/",
     "api": "cd api && make",
     "test": "API_ORIGIN=http://api jest --notify",
