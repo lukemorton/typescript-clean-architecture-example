@@ -1,8 +1,6 @@
 import * as HTTPUserGateway from './HTTPUserGateway'
 import { mockExecute } from '../api/Client'
 
-const API_ORIGIN = process.env.API_ORIGIN
-
 describe('HTTPUserGateway', () => {
   describe('when finding by id', () => {
     test('user has name', async () => {

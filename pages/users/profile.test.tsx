@@ -3,8 +3,6 @@ import { mountPage } from 'republic/test-next'
 import { mockExecute } from '../../lib/api/Client'
 import UserProfile from './profile'
 
-const API_ORIGIN = process.env.API_ORIGIN
-
 describe('UserProfile', () => {
   describe('when user views the page', () => {
     test('user can see user name', async () => {
