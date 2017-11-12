@@ -27,3 +27,10 @@ Or watch your tests:
 ```
 npm test -- --watch
 ```
+
+**Run in production mode:**
+
+```
+npm run prepare
+npm start
+```
