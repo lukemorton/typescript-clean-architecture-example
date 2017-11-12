@@ -1,6 +1,5 @@
 import * as React from 'react'
-import HTTPUserGateway from '../lib/user/HTTPUserGateway'
-import LoadUserProfile from '../lib/user/LoadUserProfile'
+import { LoadUserProfile } from '../lib/user/'
 import UserProfile from '../components/UserProfile'
 
 export default class extends React.Component {
@@ -9,7 +8,7 @@ export default class extends React.Component {
   }
 
   static async getInitialProps () {
-    return await LoadUserProfile(HTTPUserGateway, { id: 'guid' })
+    return await LoadUserProfile({ id: 'guid' })
   }
 
   render () {

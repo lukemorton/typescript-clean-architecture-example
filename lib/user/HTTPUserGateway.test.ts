@@ -1,4 +1,4 @@
-import HTTPUserGateway from './HTTPUserGateway'
+import * as HTTPUserGateway from './HTTPUserGateway'
 import * as nock from 'nock'
 
 describe('HTTPUserGateway', () => {

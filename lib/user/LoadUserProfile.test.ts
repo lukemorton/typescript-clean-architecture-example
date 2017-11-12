@@ -1,5 +1,5 @@
 import LoadUserProfile from './LoadUserProfile'
-import FakeUserGateway from './FakeUserGateway'
+import * as FakeUserGateway from './FakeUserGateway'
 
 describe('LoadUserProfile', () => {
   describe('when loading profile by id', () => {

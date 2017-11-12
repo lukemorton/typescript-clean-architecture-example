@@ -1,27 +1,42 @@
 {
   "scripts": {
+    "prepare": "tsc",
     "dev": "concurrently \"tsc --watch\" next",
     "test": "jest"
   },
   "dependencies": {
-    "@types/react": "^15.0.1",
+    "@types/isomorphic-fetch": "0.0.34",
+    "@types/lodash.partial": "^4.2.3",
+    "@types/react": "^16.0",
     "isomorphic-fetch": "^2.2.1",
-    "jest-enzyme": "^3.6.1",
-    "next": "latest",
+    "lodash.partial": "^4.2.1",
+    "next": "^4.1.4",
     "nock": "^9.0.14",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1"
+    "react": "^16.0",
+    "react-dom": "^16.0",
+    "react-test-renderer": "^16.0"
   },
   "devDependencies": {
-    "@types/enzyme": "^2.8.4",
-    "@types/jest": "^20.0.5",
+    "@types/enzyme": "^3.1.4",
+    "@types/jest": "^21.1.6",
     "concurrently": "^3.1.0",
-    "enzyme": "^2.9.1",
-    "jest": "^20.0.4",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "jest": "^21.0",
+    "jest-enzyme": "^4.0.1",
+    "ts-jest": "^21.1.4",
     "typescript": "^2.1.5"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
+    "setupTestFrameworkScriptFile": "./test/support/index.ts",
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "^.+\\.test\\.ts",
+    "moduleFileExtensions": [
+      "tsx",
+      "ts",
+      "js"
+    ]
   }
 }
