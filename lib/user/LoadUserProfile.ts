@@ -1,7 +1,7 @@
 import UserGateway from './UserGateway'
 
 type Request = {
-  id: string
+  userId: string
 }
 
 type Response = {
@@ -11,6 +11,6 @@ type Response = {
 }
 
 export default async function LoadUserProfile (gateway: UserGateway, req: Request) : Promise<Response> {
-  const user = await gateway.findById(req.id)
+  const user = await gateway.findById(req.userId)
   return { user }
 }

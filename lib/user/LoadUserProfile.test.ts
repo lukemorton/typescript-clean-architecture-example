@@ -4,7 +4,7 @@ import * as FakeUserGateway from './FakeUserGateway'
 describe('LoadUserProfile', () => {
   describe('when loading profile by id', () => {
     test('user has name', async () => {
-      const { user } = await LoadUserProfile(FakeUserGateway, { id: 'guid' })
+      const { user } = await LoadUserProfile(FakeUserGateway, { userId: 'guid' })
       expect(user.name).toBe('Mr Luke Fake')
     })
   })
