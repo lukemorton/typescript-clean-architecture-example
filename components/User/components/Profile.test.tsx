@@ -3,7 +3,17 @@ import { shallow } from 'enzyme'
 import Profile from './Profile'
 
 describe('<Profile />', () => {
+  let profile
+
+  beforeEach(() => {
+    profile = shallow(<Profile name='Luke' biography='My bio' />)
+  })
+
   it('should display name', () => {
-    expect(shallow(<Profile name='Luke' />)).toIncludeText('Name: Luke')
+    expect(profile).toIncludeText('Luke')
+  })
+
+  it('should display biography', () => {
+    expect(profile).toIncludeText('My bio')
   })
 })

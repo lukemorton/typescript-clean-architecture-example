@@ -1,6 +1,7 @@
 import * as React from 'react'
 
-export default ({ name }) =>
+export default ({ name, biography }) =>
   <div>
-    <p>Name: {name}</p>
+    <p>{name}</p>
+    <p>{biography}</p>
   </div>

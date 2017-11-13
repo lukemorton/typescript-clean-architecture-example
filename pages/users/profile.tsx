@@ -4,7 +4,7 @@ import { Profile } from '../../components/User'
 
 export default app.page(class extends React.Component {
   props: {
-    user: { name: string }
+    user: { name: string, biography: string }
   }
 
   render () {

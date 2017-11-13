@@ -7,7 +7,7 @@ export function loadSpec (): any {
   return { ...spec, host: API_HOST }
 }
 
-export async function execute (operationId: String, parameters: any): Promise<any> {
+export async function execute (operationId: string, parameters: object): Promise<any> {
   const spec = loadSpec()
   const { body } = await Swagger.execute({ spec, operationId, parameters })
   return body

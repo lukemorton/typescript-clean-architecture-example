@@ -6,7 +6,8 @@ type Request = {
 
 type Response = {
   user: {
-    name: string
+    name: string,
+    biography: string
   }
 }
 
