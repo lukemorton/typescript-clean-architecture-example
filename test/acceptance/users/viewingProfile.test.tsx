@@ -5,7 +5,10 @@ import UserProfile from '../../../pages/users/profile'
 
 describe('Viewing profile', () => {
   const userId = 'uniq-guid'
-  const fakeUser = { basicInfo: { name: 'Luke', email: 'luke@example.com' } }
+  const fakeUser = {
+    basicInfo: { name: 'Luke', email: 'luke@example.com' },
+    friends: []
+  }
 
   describe('when user views the page', () => {
     test('user can see user name', async () => {

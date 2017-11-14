@@ -5,6 +5,7 @@ export async function findById (id: string) : Promise<User> {
     name: 'Mr Luke Fake',
     email: 'luke@example.com',
     biography: 'Coool',
-    twitter: '@Cool'
+    twitter: '@Cool',
+    friends: []
   }
 }
