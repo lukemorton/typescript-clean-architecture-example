@@ -4,7 +4,11 @@ import { Profile } from '../../components/User'
 
 export default app.page(class extends React.Component {
   props: {
-    user: { name: string, biography: string }
+    user: {
+      name: string,
+      biography: string,
+      twitter: string
+    }
   }
 
   render () {

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { mountPage } from 'republic/test-next'
-import mockExecute from '../../test/support/mockExecute'
-import UserProfile from './profile'
+import mockExecute from '../../support/mockExecute'
+import UserProfile from '../../../pages/users/profile'
 
-describe('UserProfile', () => {
+describe('Viewing profile', () => {
   const userId = 'uniq-guid'
   const fakeUser = { basicInfo: { name: 'Luke', email: 'luke@example.com' } }
 

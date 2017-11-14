@@ -6,7 +6,7 @@ describe('<Profile />', () => {
   let profile
 
   beforeEach(() => {
-    profile = shallow(<Profile name='Luke' biography='My bio' />)
+    profile = shallow(<Profile name='Luke' biography='My bio' twitter='@Cool' />)
   })
 
   it('should display name', () => {
@@ -15,5 +15,9 @@ describe('<Profile />', () => {
 
   it('should display biography', () => {
     expect(profile).toIncludeText('My bio')
+  })
+
+  it('should display twitter', () => {
+    expect(profile).toIncludeText('@Cool')
   })
 })
