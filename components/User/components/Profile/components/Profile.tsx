@@ -3,7 +3,12 @@ import FriendsList from './FriendsList'
 
 export default ({ name, biography, twitter, friends }) =>
   <div>
-    <p>{name}</p>
+    <style jsx>{`
+      .header {
+        font-size: 3em;
+      }
+    `}</style>
+    <div className='header'>{name}</div>
     <p>{biography}</p>
     <p>Follow on twitter: {twitter}</p>
 
