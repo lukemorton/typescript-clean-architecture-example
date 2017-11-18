@@ -1,23 +1,19 @@
 import * as React from 'react'
 import app from '../../lib/app'
+import User from '../../lib/user/User'
+import { Page } from '../../components/Common'
 import { Profile } from '../../components/User'
 
 export default app.page(class extends React.Component {
   props: {
-    user: {
-      name: string,
-      biography: string,
-      twitter: string
-    }
+    user: User
   }
 
   render () {
     return (
-      <div>
-        <h1>Hello world!</h1>
-
+      <Page title={this.props.user.name}>
         <Profile {...this.props.user} />
-      </div>
+      </Page>
     )
   }
 })
