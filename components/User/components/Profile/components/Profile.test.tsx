@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
 import Profile from './Profile'
+import Header from './Header'
 import FriendsList from './FriendsList'
 
 describe('<Profile />', () => {
@@ -13,25 +14,13 @@ describe('<Profile />', () => {
     ]
   }
 
-  let profile
-
-  beforeEach(() => {
-    profile = shallow(<Profile {...props} />)
-  })
-
-  it('should display name', () => {
-    expect(profile).toIncludeText('Luke')
-  })
-
-  it('should display biography', () => {
-    expect(profile).toIncludeText('My bio')
-  })
-
-  it('should display twitter', () => {
-    expect(profile).toIncludeText('@Cool')
+  it('should display header', () => {
+    const profile = shallow(<Profile {...props} />)
+    expect(profile.find(Header)).toBePresent()
   })
 
   it('should display friends', () => {
-    expect(profile).toContainReact(<FriendsList friends={props.friends} />)
+    const profile = shallow(<Profile {...props} />)
+    expect(profile.find(FriendsList)).toBePresent()
   })
 })

@@ -1,16 +1,13 @@
 import * as React from 'react'
+import glamorous from 'glamorous'
+import Header from './Header'
 import FriendsList from './FriendsList'
 
+const Profile = glamorous.div()
+
 export default ({ name, biography, twitter, friends }) =>
-  <div>
-    <style jsx>{`
-      .header {
-        font-size: 3em;
-      }
-    `}</style>
-    <div className='header'>{name}</div>
-    <p>{biography}</p>
-    <p>Follow on twitter: {twitter}</p>
+  <Profile>
+    <Header name={name} biography={biography} twitter={twitter} />
 
     <FriendsList friends={friends} />
-  </div>
+  </Profile>
