@@ -1,20 +1,13 @@
 import * as React from 'react'
+import '../rehydrateGlamor'
 import Head from 'next/head'
+import { Main } from 'glamorous'
 
 export default ({ title, children }) =>
-  <div>
-    <style jsx>{`
-      main {
-        margin: 6em auto;
-        width: 40em;
-      }
-    `}</style>
-
+  <Main margin='6em auto' width='40em'>
     <Head>
       <title>{title}</title>
     </Head>
 
-    <main>
-      {children}
-    </main>
-  </div>
+    {children}
+  </Main>
