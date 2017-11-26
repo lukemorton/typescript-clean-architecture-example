@@ -5,7 +5,14 @@ import FriendsList from './FriendsList'
 
 const Profile = glamorous.div()
 
-export default ({ name, biography, twitter, friends }) =>
+interface ProfileProps {
+  name: string
+  biography: string
+  twitter: string
+  friends: any
+}
+
+export default ({ name, biography, twitter, friends }: ProfileProps) =>
   <Profile>
     <Header name={name} biography={biography} twitter={twitter} />
 

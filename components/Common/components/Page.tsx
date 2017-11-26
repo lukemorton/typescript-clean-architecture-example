@@ -3,7 +3,12 @@ import '../rehydrateGlamor'
 import Head from 'next/head'
 import { Main } from 'glamorous'
 
-export default ({ title, children }) =>
+interface PageProps {
+  title: string
+  children: any
+}
+
+export default ({ title, children }: PageProps) =>
   <Main margin='6em auto' width='40em'>
     <Head>
       <title>{title}</title>
