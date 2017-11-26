@@ -7,7 +7,7 @@
     "dev": "tsc && NODE_ENV=development API_HOST=localhost:8080 nodemon lib/app.js --exec republic --watch lib/",
     "api": "cd api && make",
     "test": "API_HOST=api jest --notify",
-    "clean": "rm -f {lib,pages,spec}/**/*.js"
+    "clean": "rm -f {components,lib,pages,spec}/{*,*/*,*/*/*,*/*/*/*,*/*/*/*/*}.js"
   },
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
