@@ -1,6 +1,4 @@
-declare function require(string): any;
-
-const partial = require('lodash.partial')
+import * as partial from 'lodash.partial'
 
 import * as HTTPUserGateway from './HTTPUserGateway'
 
