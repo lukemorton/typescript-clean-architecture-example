@@ -5,5 +5,8 @@ const API_ORIGIN = process.env.API_ORIGIN
 
 export async function findById (userId: string) : Promise<User> {
   const user = await execute('findUserById', { userId })
-  return { ...user.basicInfo, friends: user.friends }
+
+  if (user) {
+    return { ...user.basicInfo, friends: user.friends }
+  }
 }

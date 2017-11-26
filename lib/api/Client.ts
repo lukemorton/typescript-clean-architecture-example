@@ -9,6 +9,15 @@ export function loadSpec (): any {
 
 export async function execute (operationId: string, parameters: object): Promise<any> {
   const spec = loadSpec()
-  const { body } = await Swagger.execute({ spec, operationId, parameters })
-  return body
+
+  try {
+    const { body } = await Swagger.execute({ spec, operationId, parameters })
+    return body
+  } catch (e) {
+    if (e.status === 404) {
+      console.info(e.message, operationId, parameters)
+    } else {
+      throw e
+    }
+  }
 }
